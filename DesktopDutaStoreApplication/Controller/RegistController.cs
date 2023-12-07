@@ -3,13 +3,13 @@ using MySqlConnector;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Reflection;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DesktopDutaStoreApplication.Model;
 
 namespace DesktopDutaStoreApplication.Controller
 {
@@ -17,15 +17,17 @@ namespace DesktopDutaStoreApplication.Controller
     {
         Connection Connect = new Connection();
 
-        public void AddUser(string username, string pw, string acc)
+        public void AddUser(string userid, string username, string pw, string nama, string email)
         {
-            string add = "INSERT INTO user_access VALUES(" + "@username,@pw,@acc)";
+            string add = "INSERT INTO pengguna VALUES(" + "@userid,@username,@pw,@nama,@email);";
             try
             {
                 cmd = new MySqlConnector.MySqlCommand(add, GetConn());
+                cmd.Parameters.Add("@userid", MySqlConnector.MySqlDbType.VarChar).Value = userid;
                 cmd.Parameters.Add("@username", MySqlConnector.MySqlDbType.VarChar).Value = username;
                 cmd.Parameters.Add("@pw", MySqlConnector.MySqlDbType.VarChar).Value = pw;
-                cmd.Parameters.Add("@acc", MySqlConnector.MySqlDbType.VarChar).Value = acc;
+                cmd.Parameters.Add("@nama", MySqlConnector.MySqlDbType.VarChar).Value = nama;
+                cmd.Parameters.Add("@email", MySqlConnector.MySqlDbType.VarChar).Value = email;
                 cmd.ExecuteNonQuery();
             }
             catch (Exception ex)

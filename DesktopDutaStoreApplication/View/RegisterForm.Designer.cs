@@ -28,185 +28,293 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.pictureBoxOrnamentBottomRed = new System.Windows.Forms.PictureBox();
+            this.pictureBoxOrnamentTopRed = new System.Windows.Forms.PictureBox();
+            this.txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnKembali = new Guna.UI2.WinForms.Guna2Button();
-            this.labelDSREG = new System.Windows.Forms.Label();
-            this.btnRegist = new Guna.UI2.WinForms.Guna2Button();
-            this.txtPasswordREG = new Guna.UI2.WinForms.Guna2TextBox();
-            this.labelPasswordREG = new System.Windows.Forms.Label();
-            this.txtUsernameREG = new Guna.UI2.WinForms.Guna2TextBox();
-            this.labelUsernameREG = new System.Windows.Forms.Label();
-            this.PBUNPREG = new System.Windows.Forms.PictureBox();
-            this.txtAccess = new Guna.UI2.WinForms.Guna2TextBox();
-            this.labelAccess = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.PBUNPREG)).BeginInit();
+            this.btnKonfirmasi = new Guna.UI2.WinForms.Guna2Button();
+            this.toggleSwithMode = new Guna.UI2.WinForms.Guna2ToggleSwitch();
+            this.labelRegister = new System.Windows.Forms.Label();
+            this.pictureBoxOrnamentBottomWhite = new System.Windows.Forms.PictureBox();
+            this.pictureBoxOrnamentTopWhite = new System.Windows.Forms.PictureBox();
+            this.pictureBoxIND = new System.Windows.Forms.PictureBox();
+            this.pictureBoxENG = new System.Windows.Forms.PictureBox();
+            this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtNama = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtAlamatEmail = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtUserId = new Guna.UI2.WinForms.Guna2TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOrnamentBottomRed)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOrnamentTopRed)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOrnamentBottomWhite)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOrnamentTopWhite)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIND)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxENG)).BeginInit();
             this.SuspendLayout();
+            // 
+            // pictureBoxOrnamentBottomRed
+            // 
+            this.pictureBoxOrnamentBottomRed.BackgroundImage = global::DesktopDutaStoreApplication.Properties.Resources.MegaRedOrnamentBottom;
+            this.pictureBoxOrnamentBottomRed.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxOrnamentBottomRed.Location = new System.Drawing.Point(-1, 467);
+            this.pictureBoxOrnamentBottomRed.Name = "pictureBoxOrnamentBottomRed";
+            this.pictureBoxOrnamentBottomRed.Size = new System.Drawing.Size(253, 148);
+            this.pictureBoxOrnamentBottomRed.TabIndex = 31;
+            this.pictureBoxOrnamentBottomRed.TabStop = false;
+            // 
+            // pictureBoxOrnamentTopRed
+            // 
+            this.pictureBoxOrnamentTopRed.BackgroundImage = global::DesktopDutaStoreApplication.Properties.Resources.MegaRedOrnament;
+            this.pictureBoxOrnamentTopRed.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxOrnamentTopRed.Location = new System.Drawing.Point(184, 0);
+            this.pictureBoxOrnamentTopRed.Name = "pictureBoxOrnamentTopRed";
+            this.pictureBoxOrnamentTopRed.Size = new System.Drawing.Size(222, 241);
+            this.pictureBoxOrnamentTopRed.TabIndex = 30;
+            this.pictureBoxOrnamentTopRed.TabStop = false;
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.BorderColor = System.Drawing.Color.Brown;
+            this.txtUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtUsername.DefaultText = "";
+            this.txtUsername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtUsername.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtUsername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUsername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUsername.Location = new System.Drawing.Point(90, 248);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.PasswordChar = '\0';
+            this.txtUsername.PlaceholderText = "Masukkan Nama Pengguna";
+            this.txtUsername.SelectedText = "";
+            this.txtUsername.Size = new System.Drawing.Size(229, 33);
+            this.txtUsername.TabIndex = 28;
             // 
             // btnKembali
             // 
-            this.btnKembali.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnKembali.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnKembali.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnKembali.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnKembali.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnKembali.FillColor = System.Drawing.Color.Firebrick;
-            this.btnKembali.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnKembali.FillColor = System.Drawing.Color.Brown;
+            this.btnKembali.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKembali.ForeColor = System.Drawing.Color.White;
-            this.btnKembali.Location = new System.Drawing.Point(15, 495);
+            this.btnKembali.Location = new System.Drawing.Point(277, 570);
             this.btnKembali.Name = "btnKembali";
-            this.btnKembali.Size = new System.Drawing.Size(322, 38);
-            this.btnKembali.TabIndex = 26;
-            this.btnKembali.Text = "KEMBALI";
+            this.btnKembali.Size = new System.Drawing.Size(116, 33);
+            this.btnKembali.TabIndex = 25;
+            this.btnKembali.Text = "Kembali";
+            this.btnKembali.Click += new System.EventHandler(this.btnKembali_Click);
             // 
-            // labelDSREG
+            // btnKonfirmasi
             // 
-            this.labelDSREG.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.labelDSREG.AutoSize = true;
-            this.labelDSREG.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDSREG.Location = new System.Drawing.Point(107, 143);
-            this.labelDSREG.Name = "labelDSREG";
-            this.labelDSREG.Size = new System.Drawing.Size(114, 18);
-            this.labelDSREG.TabIndex = 25;
-            this.labelDSREG.Text = "DUTA STORE";
+            this.btnKonfirmasi.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnKonfirmasi.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnKonfirmasi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnKonfirmasi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnKonfirmasi.FillColor = System.Drawing.Color.Brown;
+            this.btnKonfirmasi.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKonfirmasi.ForeColor = System.Drawing.Color.White;
+            this.btnKonfirmasi.Location = new System.Drawing.Point(90, 416);
+            this.btnKonfirmasi.Name = "btnKonfirmasi";
+            this.btnKonfirmasi.Size = new System.Drawing.Size(229, 33);
+            this.btnKonfirmasi.TabIndex = 24;
+            this.btnKonfirmasi.Text = "Konfirmasi";
+            this.btnKonfirmasi.Click += new System.EventHandler(this.btnDaftar_Click);
             // 
-            // btnRegist
+            // toggleSwithMode
             // 
-            this.btnRegist.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnRegist.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnRegist.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnRegist.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnRegist.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnRegist.FillColor = System.Drawing.Color.Green;
-            this.btnRegist.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnRegist.ForeColor = System.Drawing.Color.White;
-            this.btnRegist.Location = new System.Drawing.Point(15, 449);
-            this.btnRegist.Name = "btnRegist";
-            this.btnRegist.Size = new System.Drawing.Size(322, 38);
-            this.btnRegist.TabIndex = 24;
-            this.btnRegist.Text = "DAFTAR";
-            this.btnRegist.Click += new System.EventHandler(this.btnRegist_Click);
+            this.toggleSwithMode.BackColor = System.Drawing.Color.Transparent;
+            this.toggleSwithMode.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.toggleSwithMode.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.toggleSwithMode.CheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.toggleSwithMode.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.toggleSwithMode.Location = new System.Drawing.Point(13, 13);
+            this.toggleSwithMode.Name = "toggleSwithMode";
+            this.toggleSwithMode.Size = new System.Drawing.Size(35, 20);
+            this.toggleSwithMode.TabIndex = 21;
+            this.toggleSwithMode.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.toggleSwithMode.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.toggleSwithMode.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.toggleSwithMode.UncheckedState.InnerColor = System.Drawing.Color.White;
+            this.toggleSwithMode.CheckedChanged += new System.EventHandler(this.toggleSwithMode_CheckedChanged);
             // 
-            // txtPasswordREG
+            // labelRegister
             // 
-            this.txtPasswordREG.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtPasswordREG.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPasswordREG.DefaultText = "";
-            this.txtPasswordREG.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtPasswordREG.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtPasswordREG.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPasswordREG.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPasswordREG.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPasswordREG.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtPasswordREG.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPasswordREG.Location = new System.Drawing.Point(12, 305);
-            this.txtPasswordREG.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtPasswordREG.Name = "txtPasswordREG";
-            this.txtPasswordREG.PasswordChar = '\0';
-            this.txtPasswordREG.PlaceholderText = "Masukkan Password";
-            this.txtPasswordREG.SelectedText = "";
-            this.txtPasswordREG.Size = new System.Drawing.Size(325, 32);
-            this.txtPasswordREG.TabIndex = 23;
+            this.labelRegister.AutoSize = true;
+            this.labelRegister.BackColor = System.Drawing.Color.Transparent;
+            this.labelRegister.Font = new System.Drawing.Font("Montserrat", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRegister.ForeColor = System.Drawing.Color.Brown;
+            this.labelRegister.Location = new System.Drawing.Point(131, 164);
+            this.labelRegister.Name = "labelRegister";
+            this.labelRegister.Size = new System.Drawing.Size(137, 39);
+            this.labelRegister.TabIndex = 20;
+            this.labelRegister.Text = "DAFTAR";
             // 
-            // labelPasswordREG
+            // pictureBoxOrnamentBottomWhite
             // 
-            this.labelPasswordREG.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.labelPasswordREG.AutoSize = true;
-            this.labelPasswordREG.Location = new System.Drawing.Point(12, 276);
-            this.labelPasswordREG.Name = "labelPasswordREG";
-            this.labelPasswordREG.Size = new System.Drawing.Size(67, 16);
-            this.labelPasswordREG.TabIndex = 22;
-            this.labelPasswordREG.Text = "Password";
+            this.pictureBoxOrnamentBottomWhite.BackgroundImage = global::DesktopDutaStoreApplication.Properties.Resources.MegaWhiteOrnamentBottom;
+            this.pictureBoxOrnamentBottomWhite.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxOrnamentBottomWhite.Location = new System.Drawing.Point(-1, 467);
+            this.pictureBoxOrnamentBottomWhite.Name = "pictureBoxOrnamentBottomWhite";
+            this.pictureBoxOrnamentBottomWhite.Size = new System.Drawing.Size(253, 148);
+            this.pictureBoxOrnamentBottomWhite.TabIndex = 19;
+            this.pictureBoxOrnamentBottomWhite.TabStop = false;
             // 
-            // txtUsernameREG
+            // pictureBoxOrnamentTopWhite
             // 
-            this.txtUsernameREG.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtUsernameREG.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtUsernameREG.DefaultText = "";
-            this.txtUsernameREG.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtUsernameREG.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtUsernameREG.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtUsernameREG.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtUsernameREG.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUsernameREG.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtUsernameREG.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUsernameREG.Location = new System.Drawing.Point(12, 227);
-            this.txtUsernameREG.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtUsernameREG.Name = "txtUsernameREG";
-            this.txtUsernameREG.PasswordChar = '\0';
-            this.txtUsernameREG.PlaceholderText = "Masukkan Username";
-            this.txtUsernameREG.SelectedText = "";
-            this.txtUsernameREG.Size = new System.Drawing.Size(325, 32);
-            this.txtUsernameREG.TabIndex = 21;
+            this.pictureBoxOrnamentTopWhite.BackgroundImage = global::DesktopDutaStoreApplication.Properties.Resources.MegaWhiteOrnament;
+            this.pictureBoxOrnamentTopWhite.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxOrnamentTopWhite.Location = new System.Drawing.Point(184, 0);
+            this.pictureBoxOrnamentTopWhite.Name = "pictureBoxOrnamentTopWhite";
+            this.pictureBoxOrnamentTopWhite.Size = new System.Drawing.Size(222, 241);
+            this.pictureBoxOrnamentTopWhite.TabIndex = 18;
+            this.pictureBoxOrnamentTopWhite.TabStop = false;
             // 
-            // labelUsernameREG
+            // pictureBoxIND
             // 
-            this.labelUsernameREG.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.labelUsernameREG.AutoSize = true;
-            this.labelUsernameREG.Location = new System.Drawing.Point(12, 198);
-            this.labelUsernameREG.Name = "labelUsernameREG";
-            this.labelUsernameREG.Size = new System.Drawing.Size(70, 16);
-            this.labelUsernameREG.TabIndex = 20;
-            this.labelUsernameREG.Text = "Username";
+            this.pictureBoxIND.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBoxIND.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxIND.BackgroundImage = global::DesktopDutaStoreApplication.Properties.Resources.Indonesia;
+            this.pictureBoxIND.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBoxIND.Location = new System.Drawing.Point(-1, 39);
+            this.pictureBoxIND.Name = "pictureBoxIND";
+            this.pictureBoxIND.Size = new System.Drawing.Size(64, 34);
+            this.pictureBoxIND.TabIndex = 22;
+            this.pictureBoxIND.TabStop = false;
+            this.pictureBoxIND.Click += new System.EventHandler(this.pictureBoxIND_Click);
             // 
-            // PBUNPREG
+            // pictureBoxENG
             // 
-            this.PBUNPREG.BackgroundImage = global::DesktopDutaStoreApplication.Properties.Resources.Dino;
-            this.PBUNPREG.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.PBUNPREG.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PBUNPREG.Location = new System.Drawing.Point(0, 0);
-            this.PBUNPREG.Name = "PBUNPREG";
-            this.PBUNPREG.Size = new System.Drawing.Size(349, 122);
-            this.PBUNPREG.TabIndex = 19;
-            this.PBUNPREG.TabStop = false;
+            this.pictureBoxENG.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBoxENG.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxENG.BackgroundImage = global::DesktopDutaStoreApplication.Properties.Resources.English;
+            this.pictureBoxENG.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBoxENG.Location = new System.Drawing.Point(-1, 39);
+            this.pictureBoxENG.Name = "pictureBoxENG";
+            this.pictureBoxENG.Size = new System.Drawing.Size(64, 34);
+            this.pictureBoxENG.TabIndex = 23;
+            this.pictureBoxENG.TabStop = false;
+            this.pictureBoxENG.Click += new System.EventHandler(this.pictureBoxENG_Click);
             // 
-            // txtAccess
+            // txtPassword
             // 
-            this.txtAccess.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtAccess.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtAccess.DefaultText = "";
-            this.txtAccess.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtAccess.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtAccess.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtAccess.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtAccess.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAccess.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtAccess.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAccess.Location = new System.Drawing.Point(12, 368);
-            this.txtAccess.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtAccess.Name = "txtAccess";
-            this.txtAccess.PasswordChar = '\0';
-            this.txtAccess.PlaceholderText = "Masukkan Jenis Access";
-            this.txtAccess.SelectedText = "";
-            this.txtAccess.Size = new System.Drawing.Size(325, 32);
-            this.txtAccess.TabIndex = 27;
+            this.txtPassword.BorderColor = System.Drawing.Color.Brown;
+            this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPassword.DefaultText = "";
+            this.txtPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPassword.Location = new System.Drawing.Point(90, 289);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '\0';
+            this.txtPassword.PlaceholderText = "Masukkan Kata Sandi";
+            this.txtPassword.SelectedText = "";
+            this.txtPassword.Size = new System.Drawing.Size(229, 33);
+            this.txtPassword.TabIndex = 32;
             // 
-            // labelAccess
+            // txtNama
             // 
-            this.labelAccess.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.labelAccess.AutoSize = true;
-            this.labelAccess.Location = new System.Drawing.Point(15, 348);
-            this.labelAccess.Name = "labelAccess";
-            this.labelAccess.Size = new System.Drawing.Size(52, 16);
-            this.labelAccess.TabIndex = 28;
-            this.labelAccess.Text = "Access";
+            this.txtNama.BorderColor = System.Drawing.Color.Brown;
+            this.txtNama.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNama.DefaultText = "";
+            this.txtNama.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtNama.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtNama.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNama.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNama.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNama.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtNama.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNama.Location = new System.Drawing.Point(90, 330);
+            this.txtNama.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtNama.Name = "txtNama";
+            this.txtNama.PasswordChar = '\0';
+            this.txtNama.PlaceholderText = "Masukkan Nama Lengkap";
+            this.txtNama.SelectedText = "";
+            this.txtNama.Size = new System.Drawing.Size(229, 33);
+            this.txtNama.TabIndex = 33;
+            // 
+            // txtAlamatEmail
+            // 
+            this.txtAlamatEmail.BorderColor = System.Drawing.Color.Brown;
+            this.txtAlamatEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtAlamatEmail.DefaultText = "";
+            this.txtAlamatEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtAlamatEmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtAlamatEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAlamatEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAlamatEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAlamatEmail.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtAlamatEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAlamatEmail.Location = new System.Drawing.Point(90, 371);
+            this.txtAlamatEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtAlamatEmail.Name = "txtAlamatEmail";
+            this.txtAlamatEmail.PasswordChar = '\0';
+            this.txtAlamatEmail.PlaceholderText = "Masukkan Alamat Email";
+            this.txtAlamatEmail.SelectedText = "";
+            this.txtAlamatEmail.Size = new System.Drawing.Size(229, 33);
+            this.txtAlamatEmail.TabIndex = 34;
+            // 
+            // txtUserId
+            // 
+            this.txtUserId.BorderColor = System.Drawing.Color.Brown;
+            this.txtUserId.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtUserId.DefaultText = "";
+            this.txtUserId.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtUserId.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtUserId.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUserId.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUserId.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUserId.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtUserId.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUserId.Location = new System.Drawing.Point(90, 207);
+            this.txtUserId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtUserId.Name = "txtUserId";
+            this.txtUserId.PasswordChar = '\0';
+            this.txtUserId.PlaceholderText = "Masukkan Id";
+            this.txtUserId.SelectedText = "";
+            this.txtUserId.Size = new System.Drawing.Size(229, 33);
+            this.txtUserId.TabIndex = 35;
+            this.txtUserId.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUserId_KeyPress);
             // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(349, 555);
-            this.Controls.Add(this.labelAccess);
-            this.Controls.Add(this.txtAccess);
+            this.ClientSize = new System.Drawing.Size(404, 614);
+            this.Controls.Add(this.txtUserId);
+            this.Controls.Add(this.txtAlamatEmail);
+            this.Controls.Add(this.txtNama);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.labelRegister);
+            this.Controls.Add(this.pictureBoxOrnamentBottomRed);
+            this.Controls.Add(this.pictureBoxOrnamentTopRed);
+            this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.btnKembali);
-            this.Controls.Add(this.labelDSREG);
-            this.Controls.Add(this.btnRegist);
-            this.Controls.Add(this.txtPasswordREG);
-            this.Controls.Add(this.labelPasswordREG);
-            this.Controls.Add(this.txtUsernameREG);
-            this.Controls.Add(this.labelUsernameREG);
-            this.Controls.Add(this.PBUNPREG);
+            this.Controls.Add(this.btnKonfirmasi);
+            this.Controls.Add(this.toggleSwithMode);
+            this.Controls.Add(this.pictureBoxOrnamentBottomWhite);
+            this.Controls.Add(this.pictureBoxOrnamentTopWhite);
+            this.Controls.Add(this.pictureBoxIND);
+            this.Controls.Add(this.pictureBoxENG);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "RegisterForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegisterForm";
-            ((System.ComponentModel.ISupportInitialize)(this.PBUNPREG)).EndInit();
+            this.Load += new System.EventHandler(this.RegisterForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOrnamentBottomRed)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOrnamentTopRed)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOrnamentBottomWhite)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOrnamentTopWhite)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIND)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxENG)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -214,15 +322,20 @@
 
         #endregion
 
+        private System.Windows.Forms.PictureBox pictureBoxOrnamentBottomRed;
+        private System.Windows.Forms.PictureBox pictureBoxOrnamentTopRed;
+        private Guna.UI2.WinForms.Guna2TextBox txtUsername;
         private Guna.UI2.WinForms.Guna2Button btnKembali;
-        private System.Windows.Forms.Label labelDSREG;
-        private Guna.UI2.WinForms.Guna2Button btnRegist;
-        private Guna.UI2.WinForms.Guna2TextBox txtPasswordREG;
-        private System.Windows.Forms.Label labelPasswordREG;
-        private Guna.UI2.WinForms.Guna2TextBox txtUsernameREG;
-        private System.Windows.Forms.Label labelUsernameREG;
-        private System.Windows.Forms.PictureBox PBUNPREG;
-        private Guna.UI2.WinForms.Guna2TextBox txtAccess;
-        private System.Windows.Forms.Label labelAccess;
+        private Guna.UI2.WinForms.Guna2Button btnKonfirmasi;
+        private Guna.UI2.WinForms.Guna2ToggleSwitch toggleSwithMode;
+        private System.Windows.Forms.Label labelRegister;
+        private System.Windows.Forms.PictureBox pictureBoxOrnamentBottomWhite;
+        private System.Windows.Forms.PictureBox pictureBoxOrnamentTopWhite;
+        private System.Windows.Forms.PictureBox pictureBoxIND;
+        private System.Windows.Forms.PictureBox pictureBoxENG;
+        private Guna.UI2.WinForms.Guna2TextBox txtPassword;
+        private Guna.UI2.WinForms.Guna2TextBox txtNama;
+        private Guna.UI2.WinForms.Guna2TextBox txtAlamatEmail;
+        private Guna.UI2.WinForms.Guna2TextBox txtUserId;
     }
 }

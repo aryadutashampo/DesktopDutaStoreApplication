@@ -17,7 +17,11 @@ namespace DesktopDutaStoreApplication
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm());
+            //Application.Run(new UserForm());
+            //Application.Run(new AdminForm());
+            //Application.Run(new LoginForm());
+            //Application.Run(new RegisterForm());
+            Application.Run(new LoadingForm());
         }
     }
 }
