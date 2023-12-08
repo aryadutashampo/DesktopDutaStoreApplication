@@ -15,7 +15,7 @@
 - Print
 
 ## Diagram
-
+![alt text](?raw=true)
 ## Tech Stack
 - Framework Tampilan : Bunifu, Guna UI
 - Backend : C#, sqlconnector
