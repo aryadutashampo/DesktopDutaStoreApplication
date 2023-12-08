@@ -1,6 +1,6 @@
 ﻿namespace DesktopDutaStoreApplication
 {
-    partial class AdminForm
+    partial class FormAdmin
     {
         /// <summary>
         /// Required designer variable.
@@ -31,26 +31,26 @@
             this.toggleSwithMode = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             this.panelTop = new Guna.UI2.WinForms.Guna2Panel();
             this.labelSwitch = new System.Windows.Forms.Label();
-            this.pictureBoxIND = new System.Windows.Forms.PictureBox();
             this.labelGreeting = new System.Windows.Forms.Label();
-            this.pictureBoxENG = new System.Windows.Forms.PictureBox();
             this.panelBottom = new Guna.UI2.WinForms.Guna2Panel();
             this.btnKembali = new Guna.UI2.WinForms.Guna2Button();
             this.labelCopyright = new System.Windows.Forms.Label();
             this.btnManageBarang = new Guna.UI2.WinForms.Guna2Button();
             this.btnManagePelanggan = new Guna.UI2.WinForms.Guna2Button();
-            this.btnHistoryPenjualan = new Guna.UI2.WinForms.Guna2Button();
+            this.btnHistory = new Guna.UI2.WinForms.Guna2Button();
             this.btnAbout = new Guna.UI2.WinForms.Guna2Button();
             this.btnExit = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBoxLogoDarkAdmin = new System.Windows.Forms.PictureBox();
+            this.pictureBoxIND = new System.Windows.Forms.PictureBox();
+            this.pictureBoxENG = new System.Windows.Forms.PictureBox();
             this.pictureBoxLogoWhite = new System.Windows.Forms.PictureBox();
             this.pictureBoxDark = new System.Windows.Forms.PictureBox();
             this.pictureBoxLight = new System.Windows.Forms.PictureBox();
             this.panelTop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIND)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxENG)).BeginInit();
             this.panelBottom.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogoDarkAdmin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIND)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxENG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogoWhite)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDark)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLight)).BeginInit();
@@ -96,18 +96,6 @@
             this.labelSwitch.TabIndex = 7;
             this.labelSwitch.Text = "Ganti Mode";
             // 
-            // pictureBoxIND
-            // 
-            this.pictureBoxIND.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBoxIND.BackgroundImage = global::DesktopDutaStoreApplication.Properties.Resources.Indonesia;
-            this.pictureBoxIND.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBoxIND.Location = new System.Drawing.Point(774, 3);
-            this.pictureBoxIND.Name = "pictureBoxIND";
-            this.pictureBoxIND.Size = new System.Drawing.Size(64, 34);
-            this.pictureBoxIND.TabIndex = 6;
-            this.pictureBoxIND.TabStop = false;
-            this.pictureBoxIND.Click += new System.EventHandler(this.pictureBoxIND_Click);
-            // 
             // labelGreeting
             // 
             this.labelGreeting.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -118,18 +106,6 @@
             this.labelGreeting.Size = new System.Drawing.Size(151, 16);
             this.labelGreeting.TabIndex = 6;
             this.labelGreeting.Text = "Selamat Datang, Admin!";
-            // 
-            // pictureBoxENG
-            // 
-            this.pictureBoxENG.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBoxENG.BackgroundImage = global::DesktopDutaStoreApplication.Properties.Resources.English;
-            this.pictureBoxENG.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBoxENG.Location = new System.Drawing.Point(774, 3);
-            this.pictureBoxENG.Name = "pictureBoxENG";
-            this.pictureBoxENG.Size = new System.Drawing.Size(64, 34);
-            this.pictureBoxENG.TabIndex = 5;
-            this.pictureBoxENG.TabStop = false;
-            this.pictureBoxENG.Click += new System.EventHandler(this.pictureBoxENG_Click);
             // 
             // panelBottom
             // 
@@ -184,6 +160,7 @@
             this.btnManageBarang.Size = new System.Drawing.Size(206, 73);
             this.btnManageBarang.TabIndex = 7;
             this.btnManageBarang.Text = "Atur Barang";
+            this.btnManageBarang.Click += new System.EventHandler(this.btnManageBarang_Click);
             // 
             // btnManagePelanggan
             // 
@@ -200,22 +177,24 @@
             this.btnManagePelanggan.Size = new System.Drawing.Size(206, 73);
             this.btnManagePelanggan.TabIndex = 8;
             this.btnManagePelanggan.Text = "Atur Pelanggan";
+            this.btnManagePelanggan.Click += new System.EventHandler(this.btnManagePelanggan_Click);
             // 
-            // btnHistoryPenjualan
+            // btnHistory
             // 
-            this.btnHistoryPenjualan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnHistoryPenjualan.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnHistoryPenjualan.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnHistoryPenjualan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnHistoryPenjualan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnHistoryPenjualan.FillColor = System.Drawing.Color.IndianRed;
-            this.btnHistoryPenjualan.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnHistoryPenjualan.ForeColor = System.Drawing.Color.White;
-            this.btnHistoryPenjualan.Location = new System.Drawing.Point(623, 81);
-            this.btnHistoryPenjualan.Name = "btnHistoryPenjualan";
-            this.btnHistoryPenjualan.Size = new System.Drawing.Size(206, 73);
-            this.btnHistoryPenjualan.TabIndex = 9;
-            this.btnHistoryPenjualan.Text = "Riwayat Penjualan";
+            this.btnHistory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnHistory.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnHistory.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnHistory.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnHistory.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnHistory.FillColor = System.Drawing.Color.IndianRed;
+            this.btnHistory.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnHistory.ForeColor = System.Drawing.Color.White;
+            this.btnHistory.Location = new System.Drawing.Point(623, 81);
+            this.btnHistory.Name = "btnHistory";
+            this.btnHistory.Size = new System.Drawing.Size(206, 73);
+            this.btnHistory.TabIndex = 9;
+            this.btnHistory.Text = "Riwayat";
+            this.btnHistory.Click += new System.EventHandler(this.btnHistoryPenjualan_Click);
             // 
             // btnAbout
             // 
@@ -232,6 +211,7 @@
             this.btnAbout.Size = new System.Drawing.Size(206, 73);
             this.btnAbout.TabIndex = 10;
             this.btnAbout.Text = "Tentang";
+            this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
             // 
             // btnExit
             // 
@@ -263,6 +243,31 @@
             this.pictureBoxLogoDarkAdmin.Size = new System.Drawing.Size(197, 198);
             this.pictureBoxLogoDarkAdmin.TabIndex = 6;
             this.pictureBoxLogoDarkAdmin.TabStop = false;
+            this.pictureBoxLogoDarkAdmin.Click += new System.EventHandler(this.pictureBoxLogo_Click);
+            // 
+            // pictureBoxIND
+            // 
+            this.pictureBoxIND.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBoxIND.BackgroundImage = global::DesktopDutaStoreApplication.Properties.Resources.Indonesia;
+            this.pictureBoxIND.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBoxIND.Location = new System.Drawing.Point(774, 3);
+            this.pictureBoxIND.Name = "pictureBoxIND";
+            this.pictureBoxIND.Size = new System.Drawing.Size(64, 34);
+            this.pictureBoxIND.TabIndex = 6;
+            this.pictureBoxIND.TabStop = false;
+            this.pictureBoxIND.Click += new System.EventHandler(this.pictureBoxIND_Click);
+            // 
+            // pictureBoxENG
+            // 
+            this.pictureBoxENG.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBoxENG.BackgroundImage = global::DesktopDutaStoreApplication.Properties.Resources.English;
+            this.pictureBoxENG.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBoxENG.Location = new System.Drawing.Point(774, 3);
+            this.pictureBoxENG.Name = "pictureBoxENG";
+            this.pictureBoxENG.Size = new System.Drawing.Size(64, 34);
+            this.pictureBoxENG.TabIndex = 5;
+            this.pictureBoxENG.TabStop = false;
+            this.pictureBoxENG.Click += new System.EventHandler(this.pictureBoxENG_Click);
             // 
             // pictureBoxLogoWhite
             // 
@@ -277,6 +282,7 @@
             this.pictureBoxLogoWhite.Size = new System.Drawing.Size(197, 198);
             this.pictureBoxLogoWhite.TabIndex = 1;
             this.pictureBoxLogoWhite.TabStop = false;
+            this.pictureBoxLogoWhite.Click += new System.EventHandler(this.pictureBoxLogo_Click);
             // 
             // pictureBoxDark
             // 
@@ -300,14 +306,14 @@
             this.pictureBoxLight.TabStop = false;
             this.pictureBoxLight.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox_Paint);
             // 
-            // AdminForm
+            // FormAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(841, 567);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnAbout);
-            this.Controls.Add(this.btnHistoryPenjualan);
+            this.Controls.Add(this.btnHistory);
             this.Controls.Add(this.btnManagePelanggan);
             this.Controls.Add(this.btnManageBarang);
             this.Controls.Add(this.pictureBoxLogoDarkAdmin);
@@ -316,18 +322,18 @@
             this.Controls.Add(this.pictureBoxLogoWhite);
             this.Controls.Add(this.pictureBoxDark);
             this.Controls.Add(this.pictureBoxLight);
-            this.Name = "AdminForm";
+            this.Name = "FormAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin Form";
             this.Load += new System.EventHandler(this.AdminForm_Load);
             this.Resize += new System.EventHandler(this.AdminForm_Resize);
             this.panelTop.ResumeLayout(false);
             this.panelTop.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIND)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxENG)).EndInit();
             this.panelBottom.ResumeLayout(false);
             this.panelBottom.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogoDarkAdmin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIND)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxENG)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogoWhite)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDark)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLight)).EndInit();
@@ -350,7 +356,7 @@
         private System.Windows.Forms.PictureBox pictureBoxLogoDarkAdmin;
         private Guna.UI2.WinForms.Guna2Button btnManageBarang;
         private Guna.UI2.WinForms.Guna2Button btnManagePelanggan;
-        private Guna.UI2.WinForms.Guna2Button btnHistoryPenjualan;
+        private Guna.UI2.WinForms.Guna2Button btnHistory;
         private Guna.UI2.WinForms.Guna2Button btnAbout;
         private Guna.UI2.WinForms.Guna2Button btnExit;
         private Guna.UI2.WinForms.Guna2Button btnKembali;

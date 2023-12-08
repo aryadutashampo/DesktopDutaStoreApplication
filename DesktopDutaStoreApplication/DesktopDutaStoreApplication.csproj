@@ -236,8 +236,11 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\BarangController.cs" />
+    <Compile Include="Controller\HistoryController.cs" />
     <Compile Include="Controller\LoginController.cs" />
-    <Compile Include="Controller\RegistController.cs" />
+    <Compile Include="Controller\DaftarController.cs" />
+    <Compile Include="Controller\PelangganController.cs" />
     <Compile Include="Model\Connection.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -245,57 +248,111 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Validation\Valid.cs" />
-    <Compile Include="View\AdminForm.cs">
+    <Compile Include="View\FormAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\AdminForm.Designer.cs">
-      <DependentUpon>AdminForm.cs</DependentUpon>
+    <Compile Include="View\FormAdmin.Designer.cs">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="View\LoadingForm.cs">
+    <Compile Include="View\FormAturBarang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\LoadingForm.Designer.cs">
-      <DependentUpon>LoadingForm.cs</DependentUpon>
+    <Compile Include="View\FormAturBarang.Designer.cs">
+      <DependentUpon>FormAturBarang.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\LoginForm.cs">
+    <Compile Include="View\FormAturPelanggan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\LoginForm.Designer.cs">
-      <DependentUpon>LoginForm.cs</DependentUpon>
+    <Compile Include="View\FormAturPelanggan.Designer.cs">
+      <DependentUpon>FormAturPelanggan.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\RegisterForm.cs">
+    <Compile Include="View\FormLoading.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\RegisterForm.Designer.cs">
-      <DependentUpon>RegisterForm.cs</DependentUpon>
+    <Compile Include="View\FormLoading.Designer.cs">
+      <DependentUpon>FormLoading.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\UserForm.cs">
+    <Compile Include="View\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\UserForm.Designer.cs">
-      <DependentUpon>UserForm.cs</DependentUpon>
+    <Compile Include="View\FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormDaftar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormDaftar.Designer.cs">
+      <DependentUpon>FormDaftar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormProfilUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormProfilUser.Designer.cs">
+      <DependentUpon>FormProfilUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormRiwayat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormRiwayat.Designer.cs">
+      <DependentUpon>FormRiwayat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormTentang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormTentang.Designer.cs">
+      <DependentUpon>FormTentang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormTransaksi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormTransaksi.Designer.cs">
+      <DependentUpon>FormTransaksi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormUser.Designer.cs">
+      <DependentUpon>FormUser.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\AdminForm.resx">
-      <DependentUpon>AdminForm.cs</DependentUpon>
+    <EmbeddedResource Include="View\FormAdmin.resx">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\LoadingForm.resx">
-      <DependentUpon>LoadingForm.cs</DependentUpon>
+    <EmbeddedResource Include="View\FormAturBarang.resx">
+      <DependentUpon>FormAturBarang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\LoginForm.resx">
-      <DependentUpon>LoginForm.cs</DependentUpon>
+    <EmbeddedResource Include="View\FormAturPelanggan.resx">
+      <DependentUpon>FormAturPelanggan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\RegisterForm.resx">
-      <DependentUpon>RegisterForm.cs</DependentUpon>
+    <EmbeddedResource Include="View\FormLoading.resx">
+      <DependentUpon>FormLoading.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\UserForm.resx">
-      <DependentUpon>UserForm.cs</DependentUpon>
+    <EmbeddedResource Include="View\FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormDaftar.resx">
+      <DependentUpon>FormDaftar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormProfilUser.resx">
+      <DependentUpon>FormProfilUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormRiwayat.resx">
+      <DependentUpon>FormRiwayat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormTentang.resx">
+      <DependentUpon>FormTentang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormTransaksi.resx">
+      <DependentUpon>FormTransaksi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormUser.resx">
+      <DependentUpon>FormUser.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -12,18 +12,23 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using DesktopDutaStoreApplication.Model;
+using MySqlConnector;
 
 namespace DesktopDutaStoreApplication.View
 {
-    public partial class LoginForm : Form
+    public partial class FormLogin : Form
     {
         private bool isDarkMode = false;
+        private Connection connection;
         LoginController lCtrl;
         Valid val;
-        public LoginForm()
+        public FormLogin()
         {
             lCtrl = new LoginController();
             val = new Valid();
+            connection = new Connection();
             InitializeComponent();
             InitializeMode();
         }
@@ -80,7 +85,7 @@ namespace DesktopDutaStoreApplication.View
 
         private void labelSignUp_Click(object sender, EventArgs e)
         {
-            RegisterForm rf = new RegisterForm();
+            FormDaftar rf = new FormDaftar();
             rf.Show();
             this.Hide();
         }
@@ -129,42 +134,77 @@ namespace DesktopDutaStoreApplication.View
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
+            string username = txtUsername.Text;
+            string password = txtPassword.Text;
+
             if ((txtUsername.Text == "") || (txtPassword.Text == ""))
             {
                 MessageBox.Show("Need Login Data", "Wrong Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             if (txtUsername.Text == "Admin123" && txtPassword.Text == "12345")
             {
-                AdminForm af = new AdminForm();
+                FormAdmin af = new FormAdmin();
                 af.Show();
                 this.Hide();
             }
             if(val.valUsername(txtUsername.Text) && val.valPassword(txtPassword.Text))
             {
-                try
+                // Menggunakan koneksi yang telah Anda buat di class Connection
+                using (MySqlConnection connection = new Connection().GetConn())
                 {
-                    string username = txtUsername.Text;
-                    string password = txtPassword.Text;
-                    DataTable table = lCtrl.getList(new MySqlConnector.MySqlCommand
-                        ("SELECT * FROM pengguna WHERE username = '" + username + "' AND pw ='" + password + "'"));
+                    // Lakukan kueri ke database untuk mendapatkan account_id dari akun_pelanggan
+                    string query = "SELECT account_id FROM akun_pelanggan WHERE username = @username AND pw = @password";
 
-                    if (table.Rows.Count > 0)
+                    using (MySqlCommand command = new MySqlCommand(query, connection))
                     {
-                        UserForm uf = new UserForm();
-                        uf.Show();
-                        this.Hide();
+                        command.Parameters.AddWithValue("@username", username);
+                        command.Parameters.AddWithValue("@password", password);
+
+                        object result = command.ExecuteScalar();
+
+                        if (result != null) // Jika login berhasil
+                        {
+                            int account_id = Convert.ToInt32(result);
+
+                            // Sekarang, kita dapat menggunakan account_id untuk mendapatkan data lain dari info_pelanggan
+                            string infoQuery = "SELECT user_id, nama, email FROM info_pelanggan WHERE user_id = @account_id";
+
+                            using (MySqlCommand infoCommand = new MySqlCommand(infoQuery, connection))
+                            {
+                                infoCommand.Parameters.AddWithValue("@account_id", account_id);
+
+                                using (MySqlDataReader reader = infoCommand.ExecuteReader())
+                                {
+                                    if (reader.Read())
+                                    {
+                                        int user_id = reader.GetInt32(0);
+                                        string nama = reader.GetString(1);
+                                        string email = reader.GetString(2);
+
+                                        // Membuka formUser dan meneruskan data
+                                        FormUser formUser = new FormUser();
+                                        formUser.SetUserData(account_id, user_id, username, nama, password, email);
+                                        formUser.Show();
+
+                                        // Menutup form login jika diperlukan
+                                        this.Hide();
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Gagal mendapatkan informasi pengguna.");
+                                    }
+                                }
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Login Gagal. Periksa kembali username dan password Anda.");
+                        }
                     }
-                    else
-                    {
-                        MessageBox.Show("Your admin and password are not exist", "Wrong Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-                catch(Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
+
 
         private void btnKeluar_Click(object sender, EventArgs e)
         {

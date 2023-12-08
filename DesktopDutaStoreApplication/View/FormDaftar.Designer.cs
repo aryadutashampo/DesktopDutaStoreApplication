@@ -1,6 +1,6 @@
 ﻿namespace DesktopDutaStoreApplication.View
 {
-    partial class RegisterForm
+    partial class FormDaftar
     {
         /// <summary>
         /// Required designer variable.

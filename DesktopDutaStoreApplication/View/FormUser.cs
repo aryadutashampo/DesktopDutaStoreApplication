@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -10,10 +11,11 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace DesktopDutaStoreApplication
 {
-    public partial class UserForm : Form
+    public partial class FormUser : Form
     {
         //Mengatur Mode
         private bool isDarkMode = false;
@@ -23,7 +25,26 @@ namespace DesktopDutaStoreApplication
         private int radius = 120;
         private Color circleColor = Color.IndianRed;
 
-        public UserForm()
+        // Properti untuk menetapkan dan mengakses data pengguna
+        public int uAccountId {  get; set; }
+        public int uIdUser { get; set; }
+        public string uNamaUser { get; set; }
+        public string uNamaLengkap { get; set; }
+        public string uPasswordUser { get; set; }
+        public string uEmailUser { get; set; }
+
+        // Metode untuk menetapkan data pengguna
+        public void SetUserData(int accountId, int idUser, string namaUser, string namaLengkap, string passwordUser, string emailUser)
+        {
+            uAccountId = accountId;
+            uIdUser = idUser;
+            uNamaUser = namaUser;
+            uNamaLengkap = namaLengkap;
+            uPasswordUser = passwordUser;
+            uEmailUser = emailUser;
+        }
+
+        public FormUser()
         {
             InitializeComponent();
             InitializeMode();
@@ -38,8 +59,10 @@ namespace DesktopDutaStoreApplication
             pictureBoxLightUser.Visible = true;
             pictureBoxDarkUser.Visible = false;
             //Mengatur Logo
-            pictureBoxLogoUser.Visible = true;
+            pictureBoxLogoWhiteUser.Visible = true;
             pictureBoxLogoDarkUser.Visible = false;
+            //Mengatur Ucapan
+            labelGreetingUser.Text = "Selamat Datang, " + uNamaLengkap + "!";
 
 
             // Menambahkan event handler Paint dan Resize saat form dimuat
@@ -88,14 +111,14 @@ namespace DesktopDutaStoreApplication
                 //Fill Color
                 btnTentangUser.FillColor = Color.OrangeRed;
                 btnkeluarUser.FillColor = Color.DarkOrange;
-                btnHistoryPembelian.FillColor = Color.OrangeRed;
+                btnHistory.FillColor = Color.OrangeRed;
                 btnTransaksi.FillColor = Color.OrangeRed;
                 btnProfilPengguna.FillColor = Color.OrangeRed;
                 btnKembali.FillColor = Color.DarkOrange;
                 //Fore Color
                 btnTentangUser.ForeColor = Color.Black;
                 btnkeluarUser.ForeColor = Color.Black;
-                btnHistoryPembelian.ForeColor = Color.Black;
+                btnHistory.ForeColor = Color.Black;
                 btnProfilPengguna.ForeColor = Color.Black;
                 btnTransaksi.ForeColor = Color.Black;
                 btnKembali.ForeColor = Color.Black;
@@ -114,18 +137,18 @@ namespace DesktopDutaStoreApplication
                 pictureBoxDarkUser.Anchor = AnchorStyles.Top | AnchorStyles.Left;
                 panelTopUser.BackColor = Color.IndianRed;
                 panelBottomUser.BackColor = Color.IndianRed;
-                pictureBoxLogoUser.BackColor = Color.IndianRed;
+                pictureBoxLogoWhiteUser.BackColor = Color.IndianRed;
                 //Fill Color
                 btnTentangUser.FillColor = Color.IndianRed;
                 btnkeluarUser.FillColor = Color.DarkRed;
-                btnHistoryPembelian.FillColor = Color.IndianRed;
+                btnHistory.FillColor = Color.IndianRed;
                 btnTransaksi.FillColor = Color.IndianRed;
                 btnProfilPengguna.FillColor = Color.IndianRed;
                 btnKembali.FillColor = Color.DarkRed;
                 //Fore Color
                 btnTentangUser.ForeColor = Color.White;
                 btnkeluarUser.ForeColor = Color.White;
-                btnHistoryPembelian.ForeColor = Color.White;
+                btnHistory.ForeColor = Color.White;
                 btnProfilPengguna.ForeColor = Color.White;
                 btnTransaksi.ForeColor = Color.White;
                 btnKembali.ForeColor = Color.White;
@@ -203,11 +226,11 @@ namespace DesktopDutaStoreApplication
             if (pictureBoxIndonesiaUser.Visible == false)
             {
                 pictureBoxIndonesiaUser.Visible = true;
-                labelGreetingUser.Text = "Welcome, Costumer!";
+                labelGreetingUser.Text = "Welcome, "+ uNamaLengkap + "!";
                 labelSwitchUser.Text = "Switch Mode";
                 btnTransaksi.Text = "Purchase Item";
                 btnProfilPengguna.Text = "User Profile";
-                btnHistoryPembelian.Text = "Purchase History";
+                btnHistory.Text = "History";
                 btnTentangUser.Text = "About";
                 btnkeluarUser.Text = "Exit";
                 btnKembali.Text = "Back";
@@ -219,11 +242,11 @@ namespace DesktopDutaStoreApplication
             if (pictureBoxIndonesiaUser.Visible == true)
             {
                 pictureBoxIndonesiaUser.Visible = false;
-                labelGreetingUser.Text = "Selamat Datang, Pelanggan!";
+                labelGreetingUser.Text = "Selamat Datang, "+ uNamaLengkap +"!";
                 labelSwitchUser.Text = "Ganti Mode";
                 btnTransaksi.Text = "Beli Barang";
                 btnProfilPengguna.Text = "Profil Pengguna";
-                btnHistoryPembelian.Text = "History Pembelian";
+                btnHistory.Text = "History";
                 btnTentangUser.Text = "Tentang";
                 btnkeluarUser.Text = "Keluar";
                 btnKembali.Text = "Kembali";
@@ -232,7 +255,7 @@ namespace DesktopDutaStoreApplication
 
         private void btnKembali_Click(object sender, EventArgs e)
         {
-            LoginForm lf = new LoginForm();
+            FormLogin lf = new FormLogin();
             lf.Show();
             this.Hide();
         }
@@ -248,6 +271,44 @@ namespace DesktopDutaStoreApplication
                 // Keluar dari aplikasi jika dikonfirmasi
                 Application.Exit();
             }
+        }
+
+        private void pictureBoxLogo_Click(object sender, EventArgs e)
+        {
+            string waUrl = "https://wa.link/2b98uf";
+            Process.Start(waUrl);
+        }
+
+        private void btnTentangUser_Click(object sender, EventArgs e)
+        {
+            FormTentang formTentang = new FormTentang();
+            formTentang.SetRoleUser(); // Tentukan peran user
+            formTentang.Show();
+            this.Hide();
+        }
+
+        private void btnHistory_Click(object sender, EventArgs e)
+        {
+            FormRiwayat formRiwayat = new FormRiwayat();
+            formRiwayat.SetRoleUser(); // Tentukan peran user
+            formRiwayat.Show();
+            this.Hide();
+        }
+
+        private void btnTransaksi_Click(object sender, EventArgs e)
+        {
+            FormTransaksi transaksi = new FormTransaksi();
+            transaksi.SetUserData(uAccountId, uIdUser, uNamaUser, uNamaLengkap, uPasswordUser, uEmailUser);
+            transaksi.Show();
+            this.Hide();
+        }
+
+        private void btnProfilPengguna_Click(object sender, EventArgs e)
+        {
+            FormProfilUser formProfil = new FormProfilUser();
+            formProfil.SetUserData(uAccountId, uIdUser, uNamaUser, uNamaLengkap, uPasswordUser, uEmailUser);
+            formProfil.Show();
+            this.Hide();
         }
     }
 }

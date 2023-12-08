@@ -1,6 +1,6 @@
 ﻿namespace DesktopDutaStoreApplication.View
 {
-    partial class LoginForm
+    partial class FormLogin
     {
         /// <summary>
         /// Required designer variable.

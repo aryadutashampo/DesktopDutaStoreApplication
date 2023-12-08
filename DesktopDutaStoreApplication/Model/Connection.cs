@@ -20,9 +20,13 @@ namespace DesktopDutaStoreApplication.Model
         {
             MySqlConnection conn = new MySqlConnection();
             conn.ConnectionString = "server=localhost;user=root;database=duta_store";
+
             try
             {
-                conn.Open();
+                if (conn.State == ConnectionState.Closed) // Check if the connection is closed
+                {
+                    conn.Open(); // Open the connection only if it's closed
+                }
             }
             catch (Exception ex)
             {

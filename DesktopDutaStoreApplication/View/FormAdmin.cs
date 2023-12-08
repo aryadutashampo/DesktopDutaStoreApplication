@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -13,7 +14,7 @@ using System.Windows.Forms;
 
 namespace DesktopDutaStoreApplication
 {
-    public partial class AdminForm : Form
+    public partial class FormAdmin : Form
     {
         //Mengatur Mode
         private bool isDarkMode = false;
@@ -23,7 +24,7 @@ namespace DesktopDutaStoreApplication
         private int radius = 120;
         private Color circleColor = Color.IndianRed;
 
-        public AdminForm()
+        public FormAdmin()
         {
             InitializeComponent();
             InitializeMode();
@@ -89,14 +90,14 @@ namespace DesktopDutaStoreApplication
                 //Fill Color
                 btnAbout.FillColor = Color.OrangeRed;
                 btnExit.FillColor = Color.DarkOrange;
-                btnHistoryPenjualan.FillColor = Color.OrangeRed;
+                btnHistory.FillColor = Color.OrangeRed;
                 btnManageBarang.FillColor = Color.OrangeRed;
                 btnManagePelanggan.FillColor = Color.OrangeRed;
                 btnKembali.FillColor = Color.DarkOrange;
                 //Fore Color
                 btnAbout.ForeColor = Color.Black;
                 btnExit.ForeColor = Color.Black;
-                btnHistoryPenjualan.ForeColor = Color.Black;
+                btnHistory.ForeColor = Color.Black;
                 btnManageBarang.ForeColor = Color.Black;
                 btnManagePelanggan.ForeColor = Color.Black;
                 btnKembali.ForeColor = Color.Black;
@@ -119,14 +120,14 @@ namespace DesktopDutaStoreApplication
                 //Fill Color
                 btnAbout.FillColor = Color.IndianRed;
                 btnExit.FillColor = Color.DarkRed;
-                btnHistoryPenjualan.FillColor = Color.IndianRed;
+                btnHistory.FillColor = Color.IndianRed;
                 btnManageBarang.FillColor = Color.IndianRed;
                 btnManagePelanggan.FillColor = Color.IndianRed;
                 btnKembali.FillColor = Color.DarkRed;
                 //Fore Color
                 btnAbout.ForeColor = Color.White;
                 btnExit.ForeColor = Color.White;
-                btnHistoryPenjualan.ForeColor = Color.White;
+                btnHistory.ForeColor = Color.White;
                 btnManageBarang.ForeColor = Color.White;
                 btnManagePelanggan.ForeColor = Color.White;
                 btnKembali.ForeColor = Color.White;
@@ -190,7 +191,7 @@ namespace DesktopDutaStoreApplication
                 labelSwitch.Text = "Ganti Mode";
                 btnManageBarang.Text = "Atur Barang";
                 btnManagePelanggan.Text = "Atur Pelanggan";
-                btnHistoryPenjualan.Text = "Riwayat Penjualan";
+                btnHistory.Text = "Riwayat";
                 btnAbout.Text = "Tentang";
                 btnExit.Text = "Keluar";
                 btnKembali.Text = "Kembali";
@@ -206,7 +207,7 @@ namespace DesktopDutaStoreApplication
                 labelSwitch.Text = "Switch Mode";
                 btnManageBarang.Text = "Manage Items";
                 btnManagePelanggan.Text = "Manage Costumer";
-                btnHistoryPenjualan.Text = "Sales History";
+                btnHistory.Text = "History";
                 btnAbout.Text = "About";
                 btnExit.Text = "Exit";
                 btnKembali.Text = "Back";
@@ -230,7 +231,7 @@ namespace DesktopDutaStoreApplication
 
         private void btnKembali_Click(object sender, EventArgs e)
         {
-            LoginForm lf = new LoginForm();
+            FormLogin lf = new FormLogin();
             this.Hide();
             lf.Show();
         }
@@ -246,6 +247,42 @@ namespace DesktopDutaStoreApplication
                 // Keluar dari aplikasi jika dikonfirmasi
                 Application.Exit();
             }
+        }
+
+        private void pictureBoxLogo_Click(object sender, EventArgs e)
+        {
+            string waUrl = "https://wa.link/2b98uf";
+            Process.Start(waUrl);
+        }
+
+        private void btnAbout_Click(object sender, EventArgs e)
+        {
+            FormTentang formTentang = new FormTentang();
+            formTentang.SetRoleAdmin(); // Tentukan peran admin
+            formTentang.Show();
+            this.Hide();
+        }
+
+        private void btnHistoryPenjualan_Click(object sender, EventArgs e)
+        {
+            FormRiwayat formRiwayat = new FormRiwayat();
+            formRiwayat.SetRoleAdmin(); // Tentukan peran admin
+            formRiwayat.Show();
+            this.Hide();
+        }
+
+        private void btnManagePelanggan_Click(object sender, EventArgs e)
+        {
+            FormAturPelanggan fp = new FormAturPelanggan();
+            fp.Show();
+            this.Hide();
+        }
+
+        private void btnManageBarang_Click(object sender, EventArgs e)
+        {
+            FormAturBarang fb = new FormAturBarang();
+            fb.Show();
+            this.Hide();
         }
     }
 }

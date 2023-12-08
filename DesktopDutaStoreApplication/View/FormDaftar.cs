@@ -13,20 +13,21 @@ using DesktopDutaStoreApplication.Validation;
 
 namespace DesktopDutaStoreApplication.View
 {
-    public partial class RegisterForm : Form
+    public partial class FormDaftar : Form
     {
-        RegistController RCtrl;
+        DaftarController RCtrl;
         Valid val;
         private bool isDarkMode = false;
+        public int accountId = 0;
         public int idUser = 0;
         public string namaUser = string.Empty;
         public string namaLengkap = string.Empty;
         public string passwordUser = string.Empty;
         public string emailUser = string.Empty;
 
-        public RegisterForm()
+        public FormDaftar()
         {
-            RCtrl = new RegistController();
+            RCtrl = new DaftarController();
             val = new Valid();
             InitializeComponent();
             InitializeMode();
@@ -60,27 +61,31 @@ namespace DesktopDutaStoreApplication.View
 
         private void btnDaftar_Click(object sender, EventArgs e)
         {
-            if ((txtUsername.Text == "") || (txtPassword.Text == ""))
+            if ((txtUsername.Text == "") || (txtPassword.Text == "" || txtUserId.Text == ""  || txtNama.Text == "" || txtAlamatEmail.Text == ""))
             {
-                MessageBox.Show("Need Login Data", "Wrong Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Need Register Data", "Wrong Register", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             if (val.valId(txtUserId.Text) && val.valUsername(txtUsername.Text) && val.valPassword(txtPassword.Text) && val.valNama(txtNama.Text) && val.valEmail(txtAlamatEmail.Text))
             {
                 try
                 {
-                    RCtrl.AddUser(txtUserId.Text, txtUsername.Text, txtPassword.Text, txtNama.Text, txtAlamatEmail.Text);
-                    namaUser = txtUserId.Text;
+                    namaUser = txtUsername.Text;
                     idUser = Convert.ToInt32(txtUserId.Text);
+                    accountId = Convert.ToInt32(txtUserId.Text);
                     passwordUser = txtPassword.Text;
                     namaLengkap = txtNama.Text;
                     emailUser = txtAlamatEmail.Text;
+                    RCtrl.AddUserAccount(txtUserId.Text, txtUsername.Text, txtPassword.Text);
+                    RCtrl.AddUserInfo(txtUserId.Text, txtNama.Text, txtAlamatEmail.Text);
                     this.Controls.Clear();
                     this.InitializeComponent();
                     txtUsername.Focus();
-                    MessageBox.Show($"User Data Added\nNama: {namaLengkap}\nEmail: {emailUser}");
-                    LoginForm fl = new LoginForm();
+                    MessageBox.Show($"User Data Added\nID : {idUser}\nUsername : {namaUser}\nPassword :{passwordUser}\nNama : {namaLengkap}\nEmail: {emailUser}");
+                    // Membuka formUser dan meneruskan data
+                    FormUser formUser = new FormUser();
+                    formUser.SetUserData(accountId, idUser, namaUser, namaLengkap, passwordUser, emailUser);
+                    formUser.Show();
                     this.Hide();
-                    fl.Show();
                 }
                 catch (Exception ex)
                 {
@@ -91,7 +96,7 @@ namespace DesktopDutaStoreApplication.View
 
         private void btnKembali_Click(object sender, EventArgs e)
         {
-            LoginForm lf = new LoginForm();
+            FormLogin lf = new FormLogin();
             this.Hide();
             lf.Show();
         }

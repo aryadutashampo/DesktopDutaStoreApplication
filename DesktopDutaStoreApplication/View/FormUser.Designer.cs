@@ -1,6 +1,6 @@
 ﻿namespace DesktopDutaStoreApplication
 {
-    partial class UserForm
+    partial class FormUser
     {
         /// <summary>
         /// Required designer variable.
@@ -39,11 +39,11 @@
             this.btnKembali = new Guna.UI2.WinForms.Guna2Button();
             this.labelCopyright = new System.Windows.Forms.Label();
             this.pictureBoxDarkUser = new System.Windows.Forms.PictureBox();
-            this.pictureBoxLogoUser = new System.Windows.Forms.PictureBox();
+            this.pictureBoxLogoWhiteUser = new System.Windows.Forms.PictureBox();
             this.pictureBoxLogoDarkUser = new System.Windows.Forms.PictureBox();
             this.btnTransaksi = new Guna.UI2.WinForms.Guna2Button();
             this.btnProfilPengguna = new Guna.UI2.WinForms.Guna2Button();
-            this.btnHistoryPembelian = new Guna.UI2.WinForms.Guna2Button();
+            this.btnHistory = new Guna.UI2.WinForms.Guna2Button();
             this.btnTentangUser = new Guna.UI2.WinForms.Guna2Button();
             this.btnkeluarUser = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLightUser)).BeginInit();
@@ -52,7 +52,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEnglishUser)).BeginInit();
             this.panelBottomUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDarkUser)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogoUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogoWhiteUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogoDarkUser)).BeginInit();
             this.SuspendLayout();
             // 
@@ -126,9 +126,8 @@
             this.labelGreetingUser.ForeColor = System.Drawing.Color.White;
             this.labelGreetingUser.Location = new System.Drawing.Point(330, 16);
             this.labelGreetingUser.Name = "labelGreetingUser";
-            this.labelGreetingUser.Size = new System.Drawing.Size(179, 16);
+            this.labelGreetingUser.Size = new System.Drawing.Size(0, 16);
             this.labelGreetingUser.TabIndex = 6;
-            this.labelGreetingUser.Text = "Selamat Datang, Pelanggan!";
             // 
             // pictureBoxEnglishUser
             // 
@@ -192,19 +191,20 @@
             this.pictureBoxDarkUser.TabStop = false;
             this.pictureBoxDarkUser.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox_Paint);
             // 
-            // pictureBoxLogoUser
+            // pictureBoxLogoWhiteUser
             // 
-            this.pictureBoxLogoUser.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.pictureBoxLogoWhiteUser.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBoxLogoUser.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxLogoUser.BackgroundImage = global::DesktopDutaStoreApplication.Properties.Resources.LogoDark;
-            this.pictureBoxLogoUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBoxLogoUser.Location = new System.Drawing.Point(322, 208);
-            this.pictureBoxLogoUser.Name = "pictureBoxLogoUser";
-            this.pictureBoxLogoUser.Size = new System.Drawing.Size(197, 198);
-            this.pictureBoxLogoUser.TabIndex = 11;
-            this.pictureBoxLogoUser.TabStop = false;
+            this.pictureBoxLogoWhiteUser.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxLogoWhiteUser.BackgroundImage = global::DesktopDutaStoreApplication.Properties.Resources.LogoDark;
+            this.pictureBoxLogoWhiteUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBoxLogoWhiteUser.Location = new System.Drawing.Point(322, 208);
+            this.pictureBoxLogoWhiteUser.Name = "pictureBoxLogoWhiteUser";
+            this.pictureBoxLogoWhiteUser.Size = new System.Drawing.Size(197, 198);
+            this.pictureBoxLogoWhiteUser.TabIndex = 11;
+            this.pictureBoxLogoWhiteUser.TabStop = false;
+            this.pictureBoxLogoWhiteUser.Click += new System.EventHandler(this.pictureBoxLogo_Click);
             // 
             // pictureBoxLogoDarkUser
             // 
@@ -219,6 +219,7 @@
             this.pictureBoxLogoDarkUser.Size = new System.Drawing.Size(197, 198);
             this.pictureBoxLogoDarkUser.TabIndex = 12;
             this.pictureBoxLogoDarkUser.TabStop = false;
+            this.pictureBoxLogoDarkUser.Click += new System.EventHandler(this.pictureBoxLogo_Click);
             // 
             // btnTransaksi
             // 
@@ -234,6 +235,7 @@
             this.btnTransaksi.Size = new System.Drawing.Size(206, 73);
             this.btnTransaksi.TabIndex = 13;
             this.btnTransaksi.Text = "Beli Barang";
+            this.btnTransaksi.Click += new System.EventHandler(this.btnTransaksi_Click);
             // 
             // btnProfilPengguna
             // 
@@ -250,22 +252,24 @@
             this.btnProfilPengguna.Size = new System.Drawing.Size(206, 73);
             this.btnProfilPengguna.TabIndex = 14;
             this.btnProfilPengguna.Text = "Profil Pengguna";
+            this.btnProfilPengguna.Click += new System.EventHandler(this.btnProfilPengguna_Click);
             // 
-            // btnHistoryPembelian
+            // btnHistory
             // 
-            this.btnHistoryPembelian.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnHistoryPembelian.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnHistoryPembelian.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnHistoryPembelian.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnHistoryPembelian.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnHistoryPembelian.FillColor = System.Drawing.Color.IndianRed;
-            this.btnHistoryPembelian.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnHistoryPembelian.ForeColor = System.Drawing.Color.White;
-            this.btnHistoryPembelian.Location = new System.Drawing.Point(623, 81);
-            this.btnHistoryPembelian.Name = "btnHistoryPembelian";
-            this.btnHistoryPembelian.Size = new System.Drawing.Size(206, 73);
-            this.btnHistoryPembelian.TabIndex = 15;
-            this.btnHistoryPembelian.Text = "Riwayat Pembelian";
+            this.btnHistory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnHistory.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnHistory.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnHistory.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnHistory.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnHistory.FillColor = System.Drawing.Color.IndianRed;
+            this.btnHistory.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnHistory.ForeColor = System.Drawing.Color.White;
+            this.btnHistory.Location = new System.Drawing.Point(623, 81);
+            this.btnHistory.Name = "btnHistory";
+            this.btnHistory.Size = new System.Drawing.Size(206, 73);
+            this.btnHistory.TabIndex = 15;
+            this.btnHistory.Text = "Riwayat";
+            this.btnHistory.Click += new System.EventHandler(this.btnHistory_Click);
             // 
             // btnTentangUser
             // 
@@ -282,6 +286,7 @@
             this.btnTentangUser.Size = new System.Drawing.Size(206, 73);
             this.btnTentangUser.TabIndex = 16;
             this.btnTentangUser.Text = "Tentang";
+            this.btnTentangUser.Click += new System.EventHandler(this.btnTentangUser_Click);
             // 
             // btnkeluarUser
             // 
@@ -300,23 +305,23 @@
             this.btnkeluarUser.Text = "Keluar";
             this.btnkeluarUser.Click += new System.EventHandler(this.btnkeluarUser_Click);
             // 
-            // UserForm
+            // FormUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(841, 567);
             this.Controls.Add(this.btnkeluarUser);
             this.Controls.Add(this.btnTentangUser);
-            this.Controls.Add(this.btnHistoryPembelian);
+            this.Controls.Add(this.btnHistory);
             this.Controls.Add(this.btnProfilPengguna);
             this.Controls.Add(this.btnTransaksi);
             this.Controls.Add(this.pictureBoxLogoDarkUser);
-            this.Controls.Add(this.pictureBoxLogoUser);
+            this.Controls.Add(this.pictureBoxLogoWhiteUser);
             this.Controls.Add(this.panelTopUser);
             this.Controls.Add(this.panelBottomUser);
             this.Controls.Add(this.pictureBoxDarkUser);
             this.Controls.Add(this.pictureBoxLightUser);
-            this.Name = "UserForm";
+            this.Name = "FormUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "User Form";
             this.Load += new System.EventHandler(this.UserForm_Load);
@@ -329,7 +334,7 @@
             this.panelBottomUser.ResumeLayout(false);
             this.panelBottomUser.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDarkUser)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogoUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogoWhiteUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogoDarkUser)).EndInit();
             this.ResumeLayout(false);
 
@@ -345,11 +350,11 @@
         private System.Windows.Forms.PictureBox pictureBoxEnglishUser;
         private Guna.UI2.WinForms.Guna2Panel panelBottomUser;
         private System.Windows.Forms.PictureBox pictureBoxDarkUser;
-        private System.Windows.Forms.PictureBox pictureBoxLogoUser;
+        private System.Windows.Forms.PictureBox pictureBoxLogoWhiteUser;
         private System.Windows.Forms.PictureBox pictureBoxLogoDarkUser;
         private Guna.UI2.WinForms.Guna2Button btnTransaksi;
         private Guna.UI2.WinForms.Guna2Button btnProfilPengguna;
-        private Guna.UI2.WinForms.Guna2Button btnHistoryPembelian;
+        private Guna.UI2.WinForms.Guna2Button btnHistory;
         private Guna.UI2.WinForms.Guna2Button btnTentangUser;
         private Guna.UI2.WinForms.Guna2Button btnkeluarUser;
         private System.Windows.Forms.Label labelCopyright;

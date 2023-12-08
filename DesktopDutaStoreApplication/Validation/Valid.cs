@@ -12,7 +12,7 @@ namespace DesktopDutaStoreApplication.Validation
         //Validasi id
         public bool valId(string valId)
         {
-            for(int a = 0; a < valId.Length; a++)
+            for (int a = 0; a < valId.Length; a++)
             {
                 if ((valId[0] == '0') || valId[0] == ' ')
                 {
@@ -63,7 +63,7 @@ namespace DesktopDutaStoreApplication.Validation
         {
             for (int a = 0; a < nama.Length; a++)
             {
-                if (((nama[a] >= '0' && nama[a] <='9') || nama[nama.Length - 1] == ' ' ||
+                if (((nama[a] >= '0' && nama[a] <= '9') || nama[nama.Length - 1] == ' ' ||
                     nama[nama.Length - 1] == '-' || nama[a] == '/' || nama[a] == '\\' || nama[a] == '?' ||
                     nama[a] == '!' || nama[a] == '@' || nama[a] == '#' || nama[a] == '$' || nama[a] == '%' ||
                     nama[a] == '^' || nama[a] == '&' || nama[a] == '*' || nama[a] == '(' || nama[a] == ')' ||
@@ -98,6 +98,21 @@ namespace DesktopDutaStoreApplication.Validation
             }
             return true;
         }
+        public bool ValHarga(string harga)
+        {
+            for (int a = 0; a < harga.Length; a++)
+            {
+                if ((harga[a] >= 'A' && harga[a] <= 'Z' || harga[0] == ' ' || harga[0] == '0' || harga[harga.Length - 1] == ' ' ||
+                    harga[a] == ',' || harga[0] == '-' || harga[harga.Length - 1] == '-' || harga[a] == '/' || harga[a] == '\\' ||
+                    harga[a] == '?' || harga[a] == '`' || harga[a] == '~' || harga[a] == '!' ||
+                    harga[a] == '@' || harga[a] == '#' || harga[a] == '$' || harga[a] == '%' || harga[a] == '^' || harga[a] == '&' || harga[a] == '*'))
+                {
+                    MessageBox.Show("Input Harga failed", "add Harga", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+            }
+            return true;
 
+        }
     }
 }

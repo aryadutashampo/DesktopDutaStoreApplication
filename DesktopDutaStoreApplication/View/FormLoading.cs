@@ -5,12 +5,12 @@ using System.Windows.Forms;
 
 namespace DesktopDutaStoreApplication.View
 {
-    public partial class LoadingForm : Form
+    public partial class FormLoading : Form
     {
         private int currentImageIndex = 0;
         private readonly string[] imageNames = { "Loading1", "Loading2", "Loading3", "Loading4", "Loading5" };
 
-        public LoadingForm()
+        public FormLoading()
         {
             InitializeComponent();
             InitializeAnimation();
@@ -53,7 +53,7 @@ namespace DesktopDutaStoreApplication.View
                 ((Timer)sender).Stop();
 
                 // Open the login form
-                LoginForm loginForm = new LoginForm();
+                FormLogin loginForm = new FormLogin();
                 loginForm.FormClosed += (s, args) => ((Timer)sender).Start(); // Restart the timer when login form is closed
                 loginForm.Show();
 
