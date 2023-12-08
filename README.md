@@ -15,7 +15,7 @@
 - Print
 
 ## Diagram
-![alt text](?raw=true)
+![alt text](https://github.com/aryadutashampo/DesktopDutaStoreApplication/blob/master/ERD%20Dutastore.jpeg?raw=true)
 ## Tech Stack
 - Framework Tampilan : Bunifu, Guna UI
 - Backend : C#, sqlconnector
